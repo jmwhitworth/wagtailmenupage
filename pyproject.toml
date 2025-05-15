@@ -1,5 +1,5 @@
 [build-system]
-requires      = ["setuptools>=65.0"]
+requires = ["setuptools>=77.0", "setuptools_scm>=8.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -21,19 +21,29 @@ classifiers = [
 dependencies = [
     "wagtail>=5.0,<8.0",
 ]
-description = "Python class for interacting with Project Zomboid servers using RCON "
+description = "A Wagtail page model for creating menu pages."
 keywords = [
     'wagtail',
     'menu',
     'page',
     'pages',
 ]
-license = { file = "LICENSE" }
+license = "MIT"
 name = "wagtailmenupage"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "1.0.0"
+dynamic = ["version"]
 
 [project.urls]
 Source = "https://github.com/jmwhitworth/wagtailmenupage"
-Changelog = "https://github.com/jmwhitworth/wagtailmenupage/changelog.md"
+Changelog = "https://github.com/jmwhitworth/wagtailmenupage/blob/main/changelog.md"
+
+[tool.setuptools]
+packages = ["wagtailmenupage"]
+
+[tool.setuptools.package-data]
+"wagtailmenupage" = ["templates/**/*.html"]
+
+[tool.setuptools_scm]
+version_scheme = "post-release"
+local_scheme = "no-local-version"
