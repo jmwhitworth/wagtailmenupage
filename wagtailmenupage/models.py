@@ -5,7 +5,7 @@ from wagtail.admin.panels import FieldPanel, ObjectList, TabbedInterface
 from wagtail.models import Page
 
 
-class CustomMenuUrl(Page):
+class CustomMenuLinkPage(Page):
     """A page mode that contains a custom URL.
     This page has no frontend and won't display in the sitemap.
     """
@@ -42,7 +42,7 @@ class CustomMenuUrl(Page):
 
     edit_handler = TabbedInterface(
         [
-            ObjectList(content_panels, heading=_("Content")),
+            ObjectList(content_panels, heading=_("Menu")),
         ]
     )
 
@@ -75,6 +75,6 @@ class CustomMenuUrl(Page):
         return self.url
 
     class Meta:
-        db_table = "wagtailmenupage_custom_menu_url"
-        verbose_name = "Custom Menu URL"
-        verbose_name_plural = "Custom Menu URLs"
+        db_table = "wagtailmenupage_link_page"
+        verbose_name = "Custom menu link"
+        verbose_name_plural = "Custom menu links"

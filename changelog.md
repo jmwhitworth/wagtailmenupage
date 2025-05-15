@@ -1,6 +1,8 @@
 #
 # wagtailmenupage changelog
 
-- v1.0.1, 2025-05-15: ADD: README.md & MANIFEST.in. Updated pyproject.toml
+- v1.1.0, UPDATE: Renamed db table & admin labels
 
-- v1.0.0, 2025-05-15: Initial project creation
+- v1.0.1, ADD: README.md & MANIFEST.in. Updated pyproject.toml
+
+- v1.0.0, Initial project creation
