@@ -1,7 +1,7 @@
 # wagtailmenupage: Add custom menu items and external links with Wagtail's native menu systme.
 
 - [GitHub Repo](https://github.com/jmwhitworth/wagtailmenupage)
-- [Pypi Package](https://pypi.org/project/wagtailmenupage/)
+- [PyPI Package](https://pypi.org/project/wagtailmenupage/)
 
 ## Installation
 
@@ -36,15 +36,18 @@ INSTALLED_APPS = [
 
 ## Usage
 
+### Creating a page
+
 You can add a new Page type for menu items:
 
-![Demo screenshot 1](https://github.com/jmwhitworth/wagtailmenupage/blob/main/assets/readme_1.jpg)
+![Demo screenshot 1](https://media.jackwhitworth.com/uploads/2025/05/wagtailmenupage-add-page.webp)
 
 
 The 'Page' itself is very stripped down. It supports only 3 fields:
 
-![Demo screenshot 2](https://github.com/jmwhitworth/wagtailmenupage/blob/main/assets/readme_2.jpg)
+![Demo screenshot 2](https://media.jackwhitworth.com/uploads/2025/05/wagtailmenupage-set-page.webp)
 
+### Setting up the template
 
 You can then build a menu using Wagail's built-in system, but these page items will show the correct label and URL:
 
@@ -54,20 +57,13 @@ You can then build a menu using Wagail's built-in system, but these page items w
 
 <nav role="navigation" aria-label="Main navigation">
     <ul>
-        <li>
-            <a
-                href="{% pageurl site_root %}"
-                {% if request.path == site_root.url %}aria-current="page"{% endif %}
-            >Home</a>
-        </li>
-        {% for menuitem in site_root.get_children.live.in_menu.specific %}
-        
+        {% for menu_item in site_root.get_children.live.in_menu.specific %}
             <li>
                 <a
-                    href="{% pageurl menuitem %}"
-                    {% if request.path == menuitem.url %}aria-current="page"{% endif %}
-                    {% if menuitem.open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
-                >{{ menuitem.title }}</a>
+                    href="{% pageurl menu_item %}"
+                    {% if request.path == menu_item.url %}aria-current="page"{% endif %}
+                    {% if menu_item.open_in_new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+                >{{ menu_item.title }}</a>
             </li>
         {% endfor %}
     </ul>
@@ -77,7 +73,6 @@ You can then build a menu using Wagail's built-in system, but these page items w
 The above example doesn't show multi-level menus, but that can be done in the regular Wagtail way.
 
 Take note of the logic for opening in a new tab, which is specifically required for this package's open in new tab functionality to work.
-
 
 You can then re-order your menu items like normal.
 
