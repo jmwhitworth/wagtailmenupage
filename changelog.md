@@ -4,13 +4,17 @@
 
 ### Added
 
+- Support for Wagtail 8+
 - Missing `gettext_lazy` wrappers on name strings
 
 ### Changed
 
-- Reformatted changelog.md
-- Fixed type in README.md
-- Bumped Wagtail version support for version 8+
+- Reformatted changelog.md structure to be clearer with larger changes
+
+### Fixed
+
+- Typo in README.md
+- Dead media links in README.md
 
 ## 1.1.1
 

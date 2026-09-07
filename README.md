@@ -40,12 +40,12 @@ INSTALLED_APPS = [
 
 You can add a new Page type for menu items:
 
-![Demo screenshot 1](https://media.jackwhitworth.com/uploads/2025/05/wagtailmenupage-add-page.webp)
+![Demo screenshot 1](assets/add-page.webp)
 
 
 The 'Page' itself is very stripped down. It supports only 3 fields:
 
-![Demo screenshot 2](https://media.jackwhitworth.com/uploads/2025/05/wagtailmenupage-set-page.webp)
+![Demo screenshot 2](assets/set-page.webp)
 
 ### Setting up the template
 
