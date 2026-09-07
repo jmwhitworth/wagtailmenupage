@@ -11,6 +11,7 @@ classifiers = [
     "Framework :: Wagtail",
     "Framework :: Wagtail :: 6",
     "Framework :: Wagtail :: 7",
+    "Framework :: Wagtail :: 8",
     "Intended Audience :: Developers",
     "Natural Language :: English",
     "Operating System :: OS Independent",
@@ -19,7 +20,7 @@ classifiers = [
     "Topic :: Internet :: WWW/HTTP :: Site Management",
 ]
 dependencies = [
-    "wagtail>=5.0,<8.0",
+    "wagtail>=5.0,<9.0",
 ]
 description = "A Wagtail page model for creating menu pages."
 keywords = [

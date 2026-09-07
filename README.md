@@ -1,4 +1,4 @@
-# wagtailmenupage: Add custom menu items and external links with Wagtail's native menu systme.
+# wagtailmenupage: Add custom menu items and external links with Wagtail's native menu system.
 
 - [GitHub Repo](https://github.com/jmwhitworth/wagtailmenupage)
 - [PyPI Package](https://pypi.org/project/wagtailmenupage/)
