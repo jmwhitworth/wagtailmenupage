@@ -76,5 +76,5 @@ class CustomMenuLinkPage(Page):
 
     class Meta:
         db_table = "wagtailmenupage_link_page"
-        verbose_name = "Custom menu link"
-        verbose_name_plural = "Custom menu links"
+        verbose_name = _("Custom menu link")
+        verbose_name_plural = _("Custom menu links")

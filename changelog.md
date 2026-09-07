@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Added
+
+- Missing `gettext_lazy` wrappers on name strings
+
 ### Changed
 
 - Reformatted changelog.md
